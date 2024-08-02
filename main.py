@@ -68,7 +68,7 @@ class VideoCapture:
     
 
 
-def stream1():
+def camera_streamin():
 
     start_time = time.time()
     camera_link =0 
@@ -137,19 +137,13 @@ def stream1():
 
 def Streams_Parallel():
     with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
-        # results = [executor.submit(stream1),executor.submit(stream2),
-        #            executor.submit(stream3),executor.submit(stream4),
-        #            executor.submit(stream5),executor.submit(stream6),
-        #            executor.submit(stream7),executor.submit(stream8),
-        #            executor.submit(stream10),executor.submit(stream11)]
+        
     
-        results = [executor.submit(stream1)]
+        results = [executor.submit(camera_streamin)]
         
     for _ in concurrent.futures.as_completed(results):
         pass
 
 if __name__ == "__main__":
-    # threading.Timer(0.01, main_status,args=(15,1)).start()
-    # tun_off_all_lights()
     Streams_Parallel()
 
