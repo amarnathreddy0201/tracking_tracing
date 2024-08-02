@@ -95,7 +95,7 @@ class CentroidTracker:
         except Exception as error:
             print(error)
 
-def stream1():
+def camera_streamin():
     try:
         # Initialize the centroid tracker
         ct = CentroidTracker(max_disappeared=10)
@@ -183,12 +183,11 @@ def stream1():
 
 def Streams_Parallel():
     with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
-        results = [executor.submit(stream1)]
+        results = [executor.submit(camera_streamin)]
         
     for _ in concurrent.futures.as_completed(results):
         pass
 
 if __name__ == "__main__":
-    # threading.Timer(0.01, main_status,args=(15,1)).start()
-    # tun_off_all_lights()
+    
     Streams_Parallel()

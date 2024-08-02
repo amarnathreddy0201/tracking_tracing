@@ -83,7 +83,7 @@ class Videocapture:
             return None
 
 
-def stream1():
+def camera_streamin():
     try:
         start_time = time.time()
         camera_link = r"C:\Users\amarn\Downloads\istockphoto-1495533648-640_adpp_is.mp4"
@@ -136,13 +136,13 @@ def stream1():
         # cap.cap.release()
         cv2.destroyAllWindows()
     except Exception as error:
-        logger.error(f"stream1 error : {error}")
+        logger.error(f"camera_streamin error : {error}")
 
 
-stream1()
+camera_streamin()
 def Streams_Parallel():
     with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
-        results = [executor.submit(stream1)]
+        results = [executor.submit(camera_streamin)]
         
         for _ in concurrent.futures.as_completed(results):
             # future.result()  # Handle any exceptions

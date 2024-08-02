@@ -115,7 +115,7 @@ class CentroidTracker:
             logger.error(error)
             return self.objects, time_present
 
-def stream1():
+def camera_streamin():
     # Initialize the centroid tracker
     ct = CentroidTracker(max_disappeared=10)
 
@@ -203,7 +203,7 @@ def stream1():
 def Streams_Parallel():
     try:
         with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
-            results = [executor.submit(stream1)]
+            results = [executor.submit(camera_streamin)]
             
         for _ in concurrent.futures.as_completed(results):
             pass
