@@ -159,7 +159,6 @@ def main(args):
 
         # Display the captured frame
         cv2.imshow('Camera', online_im)
-
         # Press 'q' to exit the loop
         if cv2.waitKey(1) == ord('q'):
             break
