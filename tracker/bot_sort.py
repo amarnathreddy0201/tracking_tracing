@@ -4,7 +4,7 @@ import numpy as np
 from collections import deque
 
 from tracker import matching
-from tracker.gmc import GMC
+# from tracker.gmc import GMC
 from tracker.basetrack import BaseTrack, TrackState
 from tracker.kalman_filter import KalmanFilter
 
