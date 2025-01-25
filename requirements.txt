@@ -1,0 +1,8 @@
+matplotlib
+scipy
+opencv-python
+opencv-contrib-python
+numpy<=2
+ultralytics
+lap
+cython_bbox

@@ -6,6 +6,11 @@ __pycache__/
 # assets
 assets
 
+# Env
+botsort_tracker
+
+#
+
 # C extensions
 *.so
 
