@@ -10,7 +10,7 @@ assets
 botsort_tracker
 
 # models
-yolov8x.pt
+# yolov8x.pt
 
 # C extensions
 *.so
