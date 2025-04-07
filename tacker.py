@@ -115,7 +115,7 @@ def main(args):
             break
         
         frame_id+=1
-        results = model(frame)
+        results = model(frame, classes=0)
         tracker_input=[]
         if results and len(results[0].boxes) > 0:
                     

@@ -6,7 +6,8 @@ from collections import deque
 from tracker import matching
 # from tracker.gmc import GMC
 from tracker.basetrack import BaseTrack, TrackState
-from tracker.kalman_filter import KalmanFilter
+# from tracker.kalman_filter import KalmanFilter
+from tracker.kalman_filter_acc import KalmanFilter
 
 # from fast_reid.fast_reid_interfece import FastReIDInterface
 
